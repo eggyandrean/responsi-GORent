@@ -230,7 +230,7 @@ Database `go_rent` punya 9 tabel: 3 tabel master (`providers`, `users`, `payment
 | `notifications` | `user_id`, `booking_id` nullable, `title`, `description`, `type` enum('order','promo','reminder'), `is_read` tinyint, `created_at` | ke `users`; `booking_id` ke `bookings`, ON DELETE SET NULL |
 | `favorites` | `user_id`, `car_id`, unique(`user_id`, `car_id`) | ke `users` dan `cars` |
 
-**Seeder (`database/seed.js`)** memindahkan isi `data rental.txt`: 20 mobil beserta specs dan gambar (URL foto online dari database/car\_images.json; mobil tanpa URL dikirim dengan images kosong), 11 provider unik dari field `provider`, user Ahmad Fauzi, 3 metode bayar, dan 3 notifikasi. Koordinat provider pakai titik contoh di sekitar pusat Purwokerto (-7.4245, 109.2340), digeser sedikit per provider. Tambahkan juga satu booking contoh `GR20230426` (Toyota Avanza 2023, 26 sampai 28 Apr 2023, status Completed) supaya notifikasi pertama punya data booking.
+**Seeder (`database/seed.js`)** memindahkan isi `data rental.txt`: 20 mobil beserta specs dan gambar (URL foto online dari database/car\_images.json; mobil tanpa URL dikirim dengan images kosong), 11 provider unik dari field `provider`, user Eggy Andrean (id 1), 3 metode bayar, dan 3 notifikasi. Koordinat provider pakai titik contoh di sekitar pusat Purwokerto (-7.4245, 109.2340), digeser sedikit per provider. Tambahkan juga satu booking contoh `GR20230426` (Toyota Avanza 2023, 26 sampai 28 Apr 2023, status Completed) supaya notifikasi pertama punya data booking.
 
 **Endpoint** (base URL `http://localhost:8080`, dari emulator Android `http://10.0.2.2:8080`)
 

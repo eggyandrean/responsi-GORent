@@ -385,8 +385,8 @@ List<Map<String, dynamic>> notifications = [
 ];
 
 Map<String, dynamic> userProfile = {
-  "name": "Ahmad Fauzi",
-  "email": "ahmad@gmail.com",
+  "name": "Eggy Andrean",
+  "email": "eggy.andrean@example.com",
   "phone": "0812-XXXX-5554",
   "is_verified": true,
   "driving_license": "SIM A - Uploaded & Verified",
