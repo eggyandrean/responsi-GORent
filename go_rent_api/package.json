@@ -1,0 +1,19 @@
+{
+  "name": "go_rent_api",
+  "version": "1.0.0",
+  "description": "REST API GO-RENT (Node.js + Express + MySQL)",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "seed": "node database/seed.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "mysql2": "^3.11.0"
+  }
+}

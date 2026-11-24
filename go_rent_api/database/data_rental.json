@@ -1,0 +1,500 @@
+{
+  "carList": [
+    {
+      "id": 1,
+      "name": "Toyota Avanza 2023",
+      "type": "MPV",
+      "rental_type": "Lepas Kunci",
+      "seats": 7,
+      "transmission": "Automatic",
+      "rating": 4.8,
+      "price_per_day": 350000,
+      "provider": "Astra Rental",
+      "vehicle_specs": [
+        "Airbag",
+        "Bluetooth",
+        "ABS",
+        "ISOFIX"
+      ],
+      "images": [
+        "https://picsum.photos/id/111/800/600",
+        "https://picsum.photos/id/112/800/600",
+        "https://picsum.photos/id/113/800/600"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Hyundai Creta Prime",
+      "type": "SUV",
+      "rental_type": "Lepas Kunci",
+      "seats": 5,
+      "transmission": "Automatic",
+      "rating": 4.9,
+      "price_per_day": 450000,
+      "provider": "Astra Rental",
+      "vehicle_specs": [
+        "Panoramic Sunroof",
+        "Bose Speaker",
+        "Airbag",
+        "Ventilated Seats",
+        "Bluetooth"
+      ],
+      "images": [
+        "https://picsum.photos/id/133/800/600",
+        "https://picsum.photos/id/134/800/600",
+        "https://picsum.photos/id/135/800/600",
+        "https://picsum.photos/id/136/800/600",
+        "https://picsum.photos/id/137/800/600"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Honda Brio RS",
+      "type": "City Car",
+      "rental_type": "Lepas Kunci",
+      "seats": 5,
+      "transmission": "Manual",
+      "rating": 4.7,
+      "price_per_day": 250000,
+      "provider": "Local Rent",
+      "vehicle_specs": [
+        "Bluetooth",
+        "Digital AC",
+        "Electric Mirror",
+        "Airbag"
+      ],
+      "images": [
+        "https://picsum.photos/id/183/800/600",
+        "https://picsum.photos/id/184/800/600",
+        "https://picsum.photos/id/185/800/600",
+        "https://picsum.photos/id/186/800/600"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Mitsubishi Pajero Sport",
+      "type": "SUV",
+      "rental_type": "Dengan Sopir",
+      "seats": 7,
+      "transmission": "Automatic",
+      "rating": 4.9,
+      "price_per_day": 850000,
+      "provider": "Elite Drive",
+      "vehicle_specs": [
+        "Sunroof",
+        "Leather Seats",
+        "4WD Mode",
+        "Airbag"
+      ],
+      "images": [
+        "https://picsum.photos/id/191/800/600",
+        "https://picsum.photos/id/192/800/600",
+        "https://picsum.photos/id/193/800/600"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Suzuki Ertiga Hybrid",
+      "type": "MPV",
+      "rental_type": "Lepas Kunci",
+      "seats": 7,
+      "transmission": "Automatic",
+      "rating": 4.6,
+      "price_per_day": 375000,
+      "provider": "Family Rent",
+      "vehicle_specs": [
+        "Hybrid Engine",
+        "Cruise Control",
+        "Airbag",
+        "Bluetooth"
+      ],
+      "images": [
+        "https://picsum.photos/id/201/800/600",
+        "https://picsum.photos/id/202/800/600",
+        "https://picsum.photos/id/203/800/600",
+        "https://picsum.photos/id/204/800/600"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Toyota Fortuner VRZ",
+      "type": "SUV",
+      "rental_type": "Dengan Sopir",
+      "seats": 7,
+      "transmission": "Automatic",
+      "rating": 4.8,
+      "price_per_day": 800000,
+      "provider": "Astra Rental",
+      "vehicle_specs": [
+        "Power Back Door",
+        "Leather Interior",
+        "Airbag",
+        "Bluetooth",
+        "Drive Mode"
+      ],
+      "images": [
+        "https://picsum.photos/id/211/800/600",
+        "https://picsum.photos/id/212/800/600",
+        "https://picsum.photos/id/213/800/600",
+        "https://picsum.photos/id/214/800/600",
+        "https://picsum.photos/id/215/800/600"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Daihatsu Rocky",
+      "type": "Compact SUV",
+      "rental_type": "Lepas Kunci",
+      "seats": 5,
+      "transmission": "CVT",
+      "rating": 4.5,
+      "price_per_day": 320000,
+      "provider": "City Rent",
+      "vehicle_specs": [
+        "Turbo Engine",
+        "Airbag",
+        "Bluetooth"
+      ],
+      "images": [
+        "https://picsum.photos/id/221/800/600",
+        "https://picsum.photos/id/222/800/600",
+        "https://picsum.photos/id/223/800/600"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Honda HR-V SE",
+      "type": "SUV",
+      "rental_type": "Lepas Kunci",
+      "seats": 5,
+      "transmission": "Automatic",
+      "rating": 4.9,
+      "price_per_day": 550000,
+      "provider": "Elite Drive",
+      "vehicle_specs": [
+        "Honda Sensing",
+        "Panoramic Glass Roof",
+        "Airbag",
+        "Bluetooth"
+      ],
+      "images": [
+        "https://picsum.photos/id/231/800/600",
+        "https://picsum.photos/id/232/800/600",
+        "https://picsum.photos/id/233/800/600",
+        "https://picsum.photos/id/234/800/600"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Toyota Alphard",
+      "type": "Luxury MPV",
+      "rental_type": "Dengan Sopir",
+      "seats": 6,
+      "transmission": "Automatic",
+      "rating": 5,
+      "price_per_day": 2500000,
+      "provider": "VVIP Rent",
+      "vehicle_specs": [
+        "Captain Seat",
+        "Dual Sunroof",
+        "Privacy Curtain",
+        "Premium Audio",
+        "Airbag"
+      ],
+      "images": [
+        "https://picsum.photos/id/241/800/600",
+        "https://picsum.photos/id/242/800/600",
+        "https://picsum.photos/id/243/800/600",
+        "https://picsum.photos/id/244/800/600",
+        "https://picsum.photos/id/245/800/600"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Wuling Air EV",
+      "type": "Electric",
+      "rental_type": "Lepas Kunci",
+      "seats": 4,
+      "transmission": "Automatic",
+      "rating": 4.7,
+      "price_per_day": 400000,
+      "provider": "Eco Drive",
+      "vehicle_specs": [
+        "Electric Motor",
+        "Compact Size",
+        "Airbag"
+      ],
+      "images": [
+        "https://picsum.photos/id/251/800/600",
+        "https://picsum.photos/id/252/800/600",
+        "https://picsum.photos/id/253/800/600"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Nissan Kicks e-Power",
+      "type": "Hybrid",
+      "rental_type": "Lepas Kunci",
+      "seats": 5,
+      "transmission": "Automatic",
+      "rating": 4.8,
+      "price_per_day": 600000,
+      "provider": "Eco Drive",
+      "vehicle_specs": [
+        "e-Power Engine",
+        "One Pedal Driving",
+        "Airbag",
+        "Bluetooth"
+      ],
+      "images": [
+        "https://picsum.photos/id/261/800/600",
+        "https://picsum.photos/id/262/800/600",
+        "https://picsum.photos/id/263/800/600",
+        "https://picsum.photos/id/264/800/600"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Mazda CX-5",
+      "type": "Premium SUV",
+      "rental_type": "Lepas Kunci",
+      "seats": 5,
+      "transmission": "Automatic",
+      "rating": 4.9,
+      "price_per_day": 750000,
+      "provider": "Elite Drive",
+      "vehicle_specs": [
+        "Bose Sound System",
+        "i-Activsense",
+        "Airbag"
+      ],
+      "images": [
+        "https://picsum.photos/id/271/800/600",
+        "https://picsum.photos/id/272/800/600",
+        "https://picsum.photos/id/273/800/600"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Toyota Innova Zenix",
+      "type": "MPV Hybrid",
+      "rental_type": "Lepas Kunci",
+      "seats": 7,
+      "transmission": "Automatic",
+      "rating": 5,
+      "price_per_day": 700000,
+      "provider": "Astra Rental",
+      "vehicle_specs": [
+        "Ottoman Seat",
+        "EV Mode",
+        "Airbag",
+        "Panoramic Roof",
+        "Bluetooth"
+      ],
+      "images": [
+        "https://picsum.photos/id/281/800/600",
+        "https://picsum.photos/id/282/800/600",
+        "https://picsum.photos/id/283/800/600",
+        "https://picsum.photos/id/284/800/600",
+        "https://picsum.photos/id/285/800/600"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Honda Civic RS",
+      "type": "Sedan",
+      "rental_type": "Lepas Kunci",
+      "seats": 5,
+      "transmission": "Automatic",
+      "rating": 4.9,
+      "price_per_day": 900000,
+      "provider": "Sporty Rent",
+      "vehicle_specs": [
+        "Turbo Engine",
+        "Honda Sensing",
+        "Sport Mode",
+        "Bluetooth"
+      ],
+      "images": [
+        "https://picsum.photos/id/291/800/600",
+        "https://picsum.photos/id/292/800/600",
+        "https://picsum.photos/id/293/800/600",
+        "https://picsum.photos/id/294/800/600"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Daihatsu Xenia 2023",
+      "type": "MPV",
+      "rental_type": "Lepas Kunci",
+      "seats": 7,
+      "transmission": "Manual",
+      "rating": 4.6,
+      "price_per_day": 300000,
+      "provider": "Budget Rent",
+      "vehicle_specs": [
+        "Bluetooth",
+        "Airbag",
+        "ABS"
+      ],
+      "images": [
+        "https://picsum.photos/id/301/800/600",
+        "https://picsum.photos/id/302/800/600",
+        "https://picsum.photos/id/303/800/600"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "BMW 320i Sport",
+      "type": "Luxury Sedan",
+      "rental_type": "Dengan Sopir",
+      "seats": 5,
+      "transmission": "Automatic",
+      "rating": 5,
+      "price_per_day": 3500000,
+      "provider": "Premium Cars",
+      "vehicle_specs": [
+        "Sunroof",
+        "Harman Kardon",
+        "Leather Seats",
+        "Driving Assistant",
+        "Bluetooth"
+      ],
+      "images": [
+        "https://picsum.photos/id/311/800/600",
+        "https://picsum.photos/id/312/800/600",
+        "https://picsum.photos/id/313/800/600",
+        "https://picsum.photos/id/314/800/600",
+        "https://picsum.photos/id/315/800/600"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Toyota Raize Turbo",
+      "type": "Compact SUV",
+      "rental_type": "Lepas Kunci",
+      "seats": 5,
+      "transmission": "Automatic",
+      "rating": 4.7,
+      "price_per_day": 350000,
+      "provider": "Astra Rental",
+      "vehicle_specs": [
+        "Turbo Charger",
+        "Airbag",
+        "Bluetooth",
+        "TSS"
+      ],
+      "images": [
+        "https://picsum.photos/id/321/800/600",
+        "https://picsum.photos/id/322/800/600",
+        "https://picsum.photos/id/323/800/600",
+        "https://picsum.photos/id/324/800/600"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Isuzu Mu-X",
+      "type": "Diesel SUV",
+      "rental_type": "Dengan Sopir",
+      "seats": 7,
+      "transmission": "Automatic",
+      "rating": 4.7,
+      "price_per_day": 750000,
+      "provider": "Tough Rent",
+      "vehicle_specs": [
+        "Diesel Engine",
+        "Airbag",
+        "Bluetooth"
+      ],
+      "images": [
+        "https://picsum.photos/id/331/800/600",
+        "https://picsum.photos/id/332/800/600",
+        "https://picsum.photos/id/333/800/600"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Mini Cooper S",
+      "type": "Hatchback Luxury",
+      "rental_type": "Dengan Sopir",
+      "seats": 4,
+      "transmission": "Automatic",
+      "rating": 4.9,
+      "price_per_day": 2800000,
+      "provider": "Sporty Rent",
+      "vehicle_specs": [
+        "Premium Sound",
+        "Leather Seats",
+        "Bluetooth",
+        "Harman Kardon",
+        "Airbag"
+      ],
+      "images": [
+        "https://picsum.photos/id/341/800/600",
+        "https://picsum.photos/id/342/800/600",
+        "https://picsum.photos/id/343/800/600",
+        "https://picsum.photos/id/344/800/600",
+        "https://picsum.photos/id/345/800/600"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Toyota Veloz 2024",
+      "type": "Premium MPV",
+      "rental_type": "Lepas Kunci",
+      "seats": 7,
+      "transmission": "Automatic",
+      "rating": 4.8,
+      "price_per_day": 450000,
+      "provider": "Astra Rental",
+      "vehicle_specs": [
+        "TSS Safety",
+        "Rear Seat Entertainment",
+        "Airbag",
+        "Bluetooth"
+      ],
+      "images": [
+        "https://picsum.photos/id/351/800/600",
+        "https://picsum.photos/id/352/800/600",
+        "https://picsum.photos/id/353/800/600",
+        "https://picsum.photos/id/354/800/600"
+      ]
+    }
+  ],
+  "notifications": [
+    {
+      "title": "Booking Confirmed",
+      "description": "Booking #GR20230426 for Toyota Avanza is confirmed.",
+      "time": "2 hours ago",
+      "type": "order",
+      "is_read": false
+    },
+    {
+      "title": "Special Offer",
+      "description": "Unlock 15% off your next SUV rental! Limited time.",
+      "time": "1 day ago",
+      "type": "promo",
+      "is_read": true
+    },
+    {
+      "title": "Rental Reminder",
+      "description": "Your rental for Toyota Brio starts in 24 hours.",
+      "time": "2 days ago",
+      "type": "reminder",
+      "is_read": true
+    }
+  ],
+  "userProfile": {
+    "name": "Ahmad Fauzi",
+    "email": "ahmad@gmail.com",
+    "phone": "0812-XXXX-5554",
+    "is_verified": true,
+    "driving_license": "SIM A - Uploaded & Verified",
+    "avatar_url": "assets/images/avatar.png",
+    "payment_methods": [
+      "OVO",
+      "GoPay",
+      "Bank Transfer"
+    ]
+  }
+}
