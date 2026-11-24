@@ -5,6 +5,7 @@ import 'package:go_rent_app/config/constants.dart';
 import 'package:go_rent_app/providers/rental_provider.dart';
 import 'package:go_rent_app/screens/home_screen.dart';
 import 'package:go_rent_app/screens/search_result_screen.dart';
+import 'package:go_rent_app/screens/vehicle_detail_screen.dart';
 import 'package:go_rent_app/widgets/popular_car_card.dart';
 
 import 'fake_api.dart';
@@ -98,5 +99,17 @@ void main() {
 
     await tester.tap(find.byTooltip('Notifications'));
     expect(rental.currentTab, 2);
+  });
+
+  testWidgets('Ketuk kartu Popular tanpa isi form membuka Vehicle Detail', (
+    tester,
+  ) async {
+    await pasangHome(tester);
+
+    await tester.ensureVisible(find.byType(PopularCarCard).first);
+    await tester.pump();
+    await tester.tap(find.byType(PopularCarCard).first);
+    await tester.pumpAndSettle();
+    expect(find.byType(VehicleDetailScreen), findsOneWidget);
   });
 }

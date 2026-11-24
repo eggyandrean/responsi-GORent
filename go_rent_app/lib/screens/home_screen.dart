@@ -8,6 +8,7 @@ import '../widgets/popular_car_card.dart';
 import '../widgets/rental_type_toggle.dart';
 import '../widgets/search_form.dart';
 import 'search_result_screen.dart';
+import 'vehicle_detail_screen.dart';
 
 // Tab Home: form pencarian, toggle jenis sewa, tombol Cari Mobil, dan Popular Vehicles
 class HomeScreen extends StatelessWidget {
@@ -159,8 +160,16 @@ class _PopularVehicles extends StatelessWidget {
         itemCount: cars.length,
         itemBuilder: (context, index) => Padding(
           padding: const EdgeInsets.symmetric(horizontal: 4),
-          // Ketuk kartu untuk ke Vehicle Detail dibuat di Tahap 7
-          child: PopularCarCard(car: cars[index]),
+          child: PopularCarCard(
+            car: cars[index],
+            // Masuk Detail tanpa validasi; form diminta di Vehicle Detail jika belum lengkap
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => VehicleDetailScreen(car: cars[index]),
+              ),
+            ),
+          ),
         ),
       ),
     );
