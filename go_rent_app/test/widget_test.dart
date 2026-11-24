@@ -1,30 +1,39 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:provider/provider.dart';
+import 'package:go_rent_app/config/constants.dart';
+import 'package:go_rent_app/providers/rental_provider.dart';
+import 'package:go_rent_app/screens/main_screen.dart';
 
-import 'package:go_rent_app/main.dart';
+import 'fake_api.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('MainScreen: 4 tab, badge notifikasi, dan pindah tab', (
+    tester,
+  ) async {
+    final rental = RentalProvider(apiService: buatFakeApi());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+    await tester.pumpWidget(
+      ChangeNotifierProvider.value(
+        value: rental,
+        child: MaterialApp(theme: buildAppTheme(), home: const MainScreen()),
+      ),
+    );
+    // Muat data di luar fase build, lalu tunggu UI diperbarui
+    await tester.runAsync(rental.loadInitialData);
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.byType(BottomNavigationBar), findsOneWidget);
+    expect(find.text('Home'), findsWidgets);
+    expect(find.text('2'), findsOneWidget); // badge 2 notifikasi belum dibaca
+    expect(
+      find.text('5 mobil · 0 booking · 2 notifikasi belum dibaca'),
+      findsWidgets,
+    );
+
+    await tester.tap(find.byIcon(Icons.person_outline));
+    await tester.pump();
+    expect(rental.currentTab, 3);
+    expect(find.widgetWithText(AppBar, 'Profile'), findsOneWidget);
   });
 }
