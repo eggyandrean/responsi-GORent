@@ -27,17 +27,13 @@ void main() {
     expect(find.text('Home'), findsWidgets);
     expect(find.text('2'), findsOneWidget); // badge 2 notifikasi belum dibaca
 
-    // Tab My Bookings masih placeholder berisi ringkasan data provider
     rental.changeTab(1);
     await tester.pump();
-    expect(
-      find.text('5 mobil · 0 booking · 2 notifikasi belum dibaca'),
-      findsOneWidget,
-    );
+    expect(find.text('#GR2026120101'), findsOneWidget); // My Bookings terisi
 
     await tester.tap(find.byIcon(Icons.person_outline));
     await tester.pump();
     expect(rental.currentTab, 3);
-    expect(find.widgetWithText(AppBar, 'Profile'), findsOneWidget);
+    expect(find.text('Account Settings'), findsOneWidget);
   });
 }
