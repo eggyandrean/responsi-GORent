@@ -5,6 +5,7 @@ import '../config/constants.dart';
 import '../models/car.dart';
 import '../providers/rental_provider.dart';
 import '../widgets/car_card.dart';
+import 'vehicle_detail_screen.dart';
 
 // Search Results: daftar mobil sesuai jenis sewa, chip filter, dan pilihan sort
 class SearchResultScreen extends StatelessWidget {
@@ -107,6 +108,14 @@ class _DaftarHasil extends StatelessWidget {
 
   const _DaftarHasil({required this.rental, required this.cars});
 
+  // Kartu dan tombol Book Now sama-sama membuka Vehicle Detail
+  void _bukaDetail(BuildContext context, Car car) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => VehicleDetailScreen(car: car)),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     if (rental.isLoading && rental.cars.isEmpty) {
@@ -163,8 +172,11 @@ class _DaftarHasil extends StatelessWidget {
                 }
                 return Padding(
                   padding: const EdgeInsets.only(bottom: 12),
-                  // Ketuk kartu / Book Now ke Vehicle Detail dibuat di Tahap 7
-                  child: CarCard(car: cars[index - 1]),
+                  child: CarCard(
+                    car: cars[index - 1],
+                    onTap: () => _bukaDetail(context, cars[index - 1]),
+                    onBookNow: () => _bukaDetail(context, cars[index - 1]),
+                  ),
                 );
               },
             ),
