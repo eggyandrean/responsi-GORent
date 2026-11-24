@@ -72,6 +72,29 @@ Map<String, dynamic> contohNotif(int id, bool isRead) => {
   'created_at': '2026-11-24 10:00:00',
 };
 
+Map<String, dynamic> contohBooking(int id, String kode, String status) => {
+  'id': id,
+  'booking_code': kode,
+  'user_id': 1,
+  'car_id': 1,
+  'payment_method_id': 1,
+  'renter_name': 'Eggy Andrean',
+  'pickup_location': 'Purwokerto',
+  'dropoff_location': 'Banyumas',
+  'pickup_date': '2026-12-01',
+  'dropoff_date': '2026-12-03',
+  'days': 2,
+  'price_per_day': 350000,
+  'insurance_fee': 80000,
+  'total_price': 780000,
+  'sim_uploaded': true,
+  'status': status,
+  'created_at': '2026-11-24 10:00:00',
+  'car_name': 'Toyota Avanza 2023',
+  'payment_method': 'OVO',
+  'car_image': null,
+};
+
 // Body POST /bookings terakhir yang diterima API palsu (untuk dicek di tes)
 Map<String, dynamic>? bodyBookingTerakhir;
 
@@ -125,7 +148,31 @@ ApiService buatFakeApi({
           'car_image': null,
         }, 201);
       }
-      if (path == '/bookings') return _json([]);
+      if (path == '/bookings') {
+        return _json([
+          contohBooking(2, 'GR2026120101', 'Confirmed'),
+          contohBooking(1, 'GR20230426', 'Completed'),
+        ]);
+      }
+      if (path.startsWith('/bookings/') && request.method == 'PUT') {
+        final id = int.parse(path.split('/').last);
+        return _json(contohBooking(id, 'GR2026120101', 'Cancelled'));
+      }
+      if (path.startsWith('/notifications/') && request.method == 'DELETE') {
+        return _json({'message': 'Notifikasi dihapus'});
+      }
+      if (path == '/users/1' && request.method == 'PUT') {
+        final body = jsonDecode(request.body) as Map<String, dynamic>;
+        return _json({
+          'id': 1,
+          'name': body['name'],
+          'email': 'eggy.andrean@example.com',
+          'phone': body['phone'],
+          'is_verified': true,
+          'driving_license': 'SIM A',
+          'avatar_url': 'assets/images/avatar.png',
+        });
+      }
       if (path == '/notifications') return _json(notifs);
       if (path.startsWith('/notifications/') && request.method == 'PUT') {
         final id = int.parse(path.split('/').last);
