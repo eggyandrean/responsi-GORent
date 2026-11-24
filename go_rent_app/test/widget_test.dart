@@ -26,9 +26,13 @@ void main() {
     expect(find.byType(BottomNavigationBar), findsOneWidget);
     expect(find.text('Home'), findsWidgets);
     expect(find.text('2'), findsOneWidget); // badge 2 notifikasi belum dibaca
+
+    // Tab My Bookings masih placeholder berisi ringkasan data provider
+    rental.changeTab(1);
+    await tester.pump();
     expect(
       find.text('5 mobil · 0 booking · 2 notifikasi belum dibaca'),
-      findsWidgets,
+      findsOneWidget,
     );
 
     await tester.tap(find.byIcon(Icons.person_outline));
