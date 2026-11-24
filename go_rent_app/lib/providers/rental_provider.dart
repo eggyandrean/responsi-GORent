@@ -169,6 +169,23 @@ class RentalProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  // Kembalikan semua chip filter dan sort ke awal (tombol Reset di Sort & Filter)
+  void resetFilter() {
+    filterSuv = false;
+    filterAutomatic = false;
+    filterPrice = false;
+    sortBy = 'default';
+    notifyListeners();
+  }
+
+  // Jumlah filter/sort yang sedang aktif, untuk badge tombol Sort & Filter
+  int get activeFilterCount => [
+    filterSuv,
+    filterAutomatic,
+    filterPrice,
+    sortBy != 'default',
+  ].where((aktif) => aktif).length;
+
   // Pindah tab bottom navigation dari layar mana pun (misalnya setelah Pay Now)
   void changeTab(int index) {
     if (index < 0 || index > 3 || index == currentTab) return;
