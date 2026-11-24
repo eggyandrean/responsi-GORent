@@ -72,8 +72,16 @@ Map<String, dynamic> contohNotif(int id, bool isRead) => {
   'created_at': '2026-11-24 10:00:00',
 };
 
-// ApiService palsu. gagalFavorit = true membuat POST/DELETE /favorites membalas 500.
-ApiService buatFakeApi({bool gagalFavorit = false, bool serverMati = false}) {
+// Body POST /bookings terakhir yang diterima API palsu (untuk dicek di tes)
+Map<String, dynamic>? bodyBookingTerakhir;
+
+// ApiService palsu. gagalFavorit = true membuat POST/DELETE /favorites membalas 500,
+// gagalBooking = true membuat POST /bookings membalas 400 seperti validasi backend.
+ApiService buatFakeApi({
+  bool gagalFavorit = false,
+  bool serverMati = false,
+  bool gagalBooking = false,
+}) {
   return ApiService(
     client: MockClient((request) async {
       if (serverMati) throw http.ClientException('Connection refused');
@@ -85,6 +93,38 @@ ApiService buatFakeApi({bool gagalFavorit = false, bool serverMati = false}) {
       ];
 
       if (path == '/cars') return _json(contohDaftarMobil);
+      if (path == '/bookings' && request.method == 'POST') {
+        final body = jsonDecode(request.body) as Map<String, dynamic>;
+        bodyBookingTerakhir = body;
+        if (gagalBooking) {
+          return _json({
+            'message': 'Validasi gagal',
+            'errors': {'renter_name': 'Nama penyewa minimal 3 huruf'},
+          }, 400);
+        }
+        return _json({
+          'id': 9,
+          'booking_code': 'GR2026120101',
+          'user_id': 1,
+          'car_id': body['car_id'],
+          'payment_method_id': body['payment_method_id'],
+          'renter_name': body['renter_name'],
+          'pickup_location': body['pickup_location'],
+          'dropoff_location': body['dropoff_location'],
+          'pickup_date': body['pickup_date'],
+          'dropoff_date': body['dropoff_date'],
+          'days': 2,
+          'price_per_day': 450000,
+          'insurance_fee': body['with_insurance'] == true ? 80000 : 0,
+          'total_price': body['with_insurance'] == true ? 980000 : 900000,
+          'sim_uploaded': true,
+          'status': 'Confirmed',
+          'created_at': '2026-11-24 10:00:00',
+          'car_name': 'Hyundai Creta Prime',
+          'payment_method': 'OVO',
+          'car_image': null,
+        }, 201);
+      }
       if (path == '/bookings') return _json([]);
       if (path == '/notifications') return _json(notifs);
       if (path.startsWith('/notifications/') && request.method == 'PUT') {

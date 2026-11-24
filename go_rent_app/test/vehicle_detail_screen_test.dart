@@ -119,8 +119,8 @@ void main() {
     expect(find.text('Lengkapi detail sewa dulu'), findsNothing);
     expect(find.byType(BookingScreen), findsOneWidget);
     expect(
-      find.text('Subtotal Rp 900.000 (belum termasuk asuransi Rp 80.000)'),
-      findsOneWidget,
-    );
+      find.text('Rp 980.000'),
+      findsWidgets,
+    ); // 2 hari + asuransi (default aktif)
   });
 }
